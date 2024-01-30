@@ -1,6 +1,6 @@
-package com.mrvs.lms.repository;
+package com.mrvs.lms.mongoRepository;
 
-import com.mrvs.lms.model.Journal;
+import com.mrvs.lms.mongoModel.Journal;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

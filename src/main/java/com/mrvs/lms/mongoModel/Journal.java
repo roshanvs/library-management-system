@@ -1,9 +1,7 @@
-package com.mrvs.lms.model;
+package com.mrvs.lms.mongoModel;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.Arrays;
 
 @Data
 @Document(collection = "Journals")

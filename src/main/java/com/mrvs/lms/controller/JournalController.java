@@ -1,6 +1,6 @@
 package com.mrvs.lms.controller;
 
-import com.mrvs.lms.model.Journal;
+import com.mrvs.lms.mongoModel.Journal;
 import com.mrvs.lms.service.JournalService;
 import org.springframework.web.bind.annotation.*;
 

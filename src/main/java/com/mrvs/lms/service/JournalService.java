@@ -1,8 +1,8 @@
 package com.mrvs.lms.service;
 
-import com.mrvs.lms.model.Journal;
-import com.mrvs.lms.repository.JournalRepository;
-import com.mrvs.lms.repository.SearchRepository;
+import com.mrvs.lms.mongoModel.Journal;
+import com.mrvs.lms.mongoRepository.JournalRepository;
+import com.mrvs.lms.mongoRepository.SearchRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

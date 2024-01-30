@@ -1,23 +1,22 @@
-package com.mrvs.lms.repository;
+package com.mrvs.lms.mongoRepository;
 
 import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mrvs.lms.model.Journal;
+import com.mrvs.lms.mongoModel.Journal;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.convert.MongoConverter;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-@Component
+@Repository
 public class SearchImplementation implements SearchRepository {
     @Autowired
-    MongoClient client;
+    MongoClient mongoClient;
 
     @Autowired
     MongoConverter converter;
@@ -27,7 +26,7 @@ public class SearchImplementation implements SearchRepository {
 
         final List<Journal> posts = new ArrayList<>();
 
-        MongoDatabase database = client.getDatabase("l-m-s");
+        MongoDatabase database = mongoClient.getDatabase("l-m-s");
         MongoCollection<Document> collection = database.getCollection("Journals");
 
         AggregateIterable<Document> result = collection.aggregate(Arrays.asList(new Document("$search",
