@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @EnableMongoRepositories(basePackages = {"com.mrvs.lms.mongoModel","com.mrvs.lms.mongoRepository"}, mongoTemplateRef = "mongoTemplate")
 @Configuration
-public class JournalConfig  extends AbstractMongoClientConfiguration {
+public class MongoConfig extends AbstractMongoClientConfiguration {
     @Value("${mongodb.uri}")
     private String uri;
 
